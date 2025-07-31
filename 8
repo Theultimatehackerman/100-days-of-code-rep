@@ -1,0 +1,18 @@
+import random as r
+
+n = input("Name? ").strip(); m = input("1=Affirm, 2=Insult: "); d = input("Day? ").lower(); a = input("Fav thing? ").lower(); nl = n.lower()
+
+if m == "1":
+    print(f"{n}, " + (
+        "fresh start — own this Monday." if d=="monday" else
+        f"your {a} shines like starlight." if a in ["reading","drawing","coding"] else
+        f"it's {d}, make it yours."))
+
+elif m == "2":
+    print(f"{n}, " + (
+        "Friday chaos suits you." if d=="friday" else
+        "NASA still can't explain your gaming." if a=="gaming" else
+        "you’re the punchline, Dave." if nl=="dave" else
+        f"somehow turned {a} into a disasterclass."))
+
+else: print("1 or 2, please.")
